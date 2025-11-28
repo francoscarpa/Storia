@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{{ title }}</title>
+   <meta name="description" content="{{ description }}">
+   <link rel="stylesheet" href="/Style/Style.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js" rel="script"></script>
+</head>
+
+<body>
+   <nav>
+      {% for NavPage in collections.MainNavPages %}
+      <a href="{{ NavPage.url }}">{{ NavPage.data.h1 }}</a>
+      {% endfor %}
+   </nav>
+   <header>
+      <h1>{{ h1 | safe }}</h1>
+   </header>
+   <main>{{ content | safe }}</main>
+   <footer>
+      <p>Franco Scarpa © Copyright 2025 - {% CurrentYear %}</p>
+   </footer>
+</body>
+
+</html>
