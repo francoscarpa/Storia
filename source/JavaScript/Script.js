@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         editable: false,
         zoomMin: 15778476000000,
         zoomMax: 315360000000000,
+        maxHeight: '80%',
         tooltip: {
             followMouse: true,
             overflowMethod: "cap",

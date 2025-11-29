@@ -109,6 +109,16 @@ $backgrounds: (
     text-align: center;
 }
 
+.XXXStartPrecise {
+    background: linear-gradient(to right, red, red, transparent) !important;
+    text-align: center;
+}
+
+.XXXEndPrecise {
+    background: linear-gradient(to right, transparent, red, red) !important;
+    text-align: center;
+}
+
 .vis-item.vis-range {
     border-style: none !important;
 }
@@ -118,4 +128,5 @@ $backgrounds: (
     border: 1px solid black;
     padding: 0.5rem;
     cursor: pointer;
+    margin: 0.5rem;
 }
