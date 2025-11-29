@@ -1,8 +1,10 @@
+$font-stack: Georgia, 'Times New Roman', Times, serif;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: $font-stack;
 }
 
 html,
@@ -17,26 +19,30 @@ body {
     min-height: 100vh;
 }
 
-nav {
+nav,
+header,
+main,
+footer {
     min-height: 0;
+}
+
+nav {
     background-color: aqua;
 }
 
 header {
-    min-height: 0;
     background-color: lightpink;
 }
 
 main {
     flex: 20 1 0;
-    min-height: 0;
     overflow-y: auto;
     background-color: lightskyblue;
 }
 
 footer {
-    min-height: 0;
     background-color: lightgreen;
+    text-align: center;
 }
 
 #container {
@@ -54,11 +60,7 @@ footer {
     overflow: scroll;
 }
 
-#timeline {
-    flex: 1;
-    height: 50%;
-}
-
+#timeline,
 #characters {
     flex: 1;
     height: 50%;
@@ -82,50 +84,38 @@ ol {
     padding-left: 40px;
 }
 
-.vis-item.vis-background.gray {
-    background-color: rgba(128, 128, 128, 0.15);
+$backgrounds: (
+    gray: rgba(128, 128, 128, 0.15),
+    lightblue: rgba(86, 180, 233, 0.2),
+    cyan: rgba(29, 210, 210, 0.18),
+    darkgray: rgba(64, 64, 64, 0.16),
+    yellow: rgba(255, 215, 0, 0.18),
+    purple: rgba(170, 110, 220, 0.15),
+    pink: rgba(255, 99, 187, 0.15),
+    brown: rgba(134, 70, 30, 0.13),
+    indigo: rgba(75, 0, 130, 0.18),
+    orange: rgba(255, 165, 0, 0.18),
+    lime: rgba(173, 255, 47, 0.17)
+);
+
+@each $name, $color in $backgrounds {
+    .vis-item.vis-background.#{"" + $name} {
+        background-color: $color;
+    }
 }
 
-.vis-item.vis-background.lightblue {
-    background-color: rgba(86, 180, 233, 0.2);
-}
-
-.vis-item.vis-background.cyan {
-    background-color: rgba(29, 210, 210, 0.18);
-}
-
-.vis-item.vis-background.darkgray {
-    background-color: rgba(64, 64, 64, 0.16);
-}
-
-.vis-item.vis-background.yellow {
-    background-color: rgba(255, 215, 0, 0.18);
-}
-
-.vis-item.vis-background.purple {
-    background-color: rgba(170, 110, 220, 0.15);
-}
-
-.vis-item.vis-background.pink {
-    background-color: rgba(255, 99, 187, 0.15);
-}
-
-.vis-item.vis-background.brown {
-    background-color: rgba(134, 70, 30, 0.13);
-}
-
-.vis-item.vis-background.indigo {
-    background-color: rgba(75, 0, 130, 0.18);
-}
-
-.vis-item.vis-background.orange {
-    background-color: rgba(255, 165, 0, 0.18);
-}
-
-.vis-item.vis-background.lime {
-    background-color: rgba(173, 255, 47, 0.17);
-}
-
-footer {
+.XXX {
+    background: linear-gradient(to right, transparent, red, transparent) !important;
     text-align: center;
+}
+
+.vis-item.vis-range {
+    border-style: none !important;
+}
+
+#ResetTimelineButton {
+    outline: none;
+    border: 1px solid black;
+    padding: 0.5rem;
+    cursor: pointer;
 }

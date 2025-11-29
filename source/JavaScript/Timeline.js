@@ -19,6 +19,12 @@ var arthurEvansScopreString = "Arthur Evans scopre la civiltà cretese, iniziand
 var pitagoraString = "Pitagora";
 var miletoAnnessaDaiPersianiString = "Mileto annessa dai Persiani";
 var eraclitoDiEfesoString = "Eraclito di Efeso";
+var esiodoString = "Esiodo";
+var taleteDiMiletoString = "Talete di Mileto";
+var saffoString = "Saffo";
+var licurgoString = "Licurgo";
+var soloneString = "Solone";
+var pisistratoString = "Pisistrato";
 
 var itemsArray = [
     { id: 1, content: preistoriaString, start: "-004000", end: "-003000", type: "background", className: "indigo" },
@@ -39,9 +45,15 @@ var itemsArray = [
     { id: 23, content: acheiString, start: "-002000", end: "-001200" },
     { id: 24, content: guerraDiTroiaString, start: "-001300", end: "-001200" },
     { id: 25, content: arthurEvansScopreString, start: "001900", type: "box" },
-    { id: 27, content: pitagoraString, start: "-000580", end: "-000495" },
+    { id: 27, content: pitagoraString, start: "-000580", end: "-000495", className: "XXX" },
     { id: 28, content: miletoAnnessaDaiPersianiString, start: "-000546", type: "box" },
-    { id: 29, content: eraclitoDiEfesoString, start: "-000535", end: "-000475" }
+    { id: 29, content: eraclitoDiEfesoString, start: "-000535", end: "-000475", className: "XXX" },
+    { id: 30, content: esiodoString, start: "-000750", end: "-000650", className: "XXX" },
+    { id: 31, content: taleteDiMiletoString, start: "-000624", end: "-000546", className: "XXX" },
+    { id: 32, content: saffoString, start: "-000630", end: "-000570", className: "XXX" },
+    { id: 33, content: licurgoString, start: "-000820", end: "-000730", className: "XXX" },
+    { id: 34, content: soloneString, start: "-000638", end: "-000558", className: "XXX" },
+    { id: 35, content: pisistratoString, start: "-000561", end: "-000527", className: "XXX" }
 ];
 
 itemsArray.forEach(function (item) {
