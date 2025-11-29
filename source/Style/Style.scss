@@ -18,26 +18,23 @@ body {
 }
 
 nav {
-    flex: 1 1 0;
     min-height: 0;
     background-color: aqua;
 }
 
 header {
-    flex: 1 1 0;
     min-height: 0;
     background-color: lightpink;
 }
 
 main {
-    flex: 10 1 0;
+    flex: 20 1 0;
     min-height: 0;
     overflow-y: auto;
     background-color: lightskyblue;
 }
 
 footer {
-    flex: 1 1 0;
     min-height: 0;
     background-color: lightgreen;
 }
