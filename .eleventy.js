@@ -62,6 +62,14 @@ module.exports = function (eleventyConfig) {
     // Get the current year.
     eleventyConfig.addShortcode("CurrentYear", () => new Date().getFullYear());
 
+    const greekNames = ["Ippia", "Pisistrato", "Ipparco"];
+
+    greekNames.forEach(name => {
+        eleventyConfig.addShortcode(name, function () {
+            return `<span class="SelectableCharacter" onclick="RealGreek(this.innerText)">${name}</span>`;
+        });
+    });
+
     // Produce responsive images.
     eleventyConfig.addShortcode("image", async function (src, alt, sizes = "100vw") {
         let metadata = await Image(src, {
