@@ -92,7 +92,13 @@ document.addEventListener('DOMContentLoaded', function () {
     window.Test = function (Id) {
         data = { nodes: ricercatoriNodes, edges: ricercatoriEdges };
         network = new vis.Network(charactersContainer, data, options);
-        network.focus(Id);
+        Focus(network, Id);
+    };
+
+    window.RealGreek = function (Id) {
+        data = { nodes: realGreekNodes, edges: realGreekEdges };
+        network = new vis.Network(charactersContainer, data, options);
+        Focus(network, Id);
     };
 
     function Focus(Network, Id) {
